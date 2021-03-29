@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UIReplication.Views.DetailPage"
+             NavigationPage.HasNavigationBar="False"
+             x:Name="detailPage">
+
+    <!--<NavigationPage.TitleView>
+        <Label Text="{Binding MusicItem.Title}" FontSize="25" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand"/>
+    </NavigationPage.TitleView>-->
+
+    <ScrollView>
+
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,auto,0.15*,*" Padding="0" RowSpacing="2" ColumnSpacing="2">
+            <Frame IsClippedToBounds="True"  BackgroundColor="#00cebe" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HeightRequest="50"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+
+                    <ImageButton Source="{Binding BackImage}" Command="{Binding BackCommand}" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="#00cebe">
+
+                    </ImageButton>
+
+                    <Label Text="{Binding MusicItem.Title}"  HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" FontSize="30" TextColor="White" BackgroundColor="#00cebe">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </Frame>
+            <Image Source="{Binding MusicItem.ImageSource}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Start" HorizontalOptions="Center"/>
+
+            <Image Source="{Binding SendImage}"  Grid.Column="0"  Grid.Row="2" Aspect="AspectFit"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="40" WidthRequest="40" BackgroundColor="White"/>
+            <Image Source="{Binding AddToCalendarImage}" Grid.Column="1"  Grid.Row="2" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="40" WidthRequest="40" BackgroundColor="White"/>
+            <Image Source="{Binding HeartImage}" Grid.Column="2"  Grid.Row="2" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="40" WidthRequest="40" BackgroundColor="White"/>
+
+            <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e8f4f4">
+                <Label Text="{Binding MusicItem.Title}" TextColor="#49bbb9" Margin="15" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="{Binding MusicItem.Description}" Margin="15,0,15,15" FontSize="25" TextColor="Gray"/>
+            </StackLayout>
+
+            <StackLayout>
+
+            </StackLayout>
+        </Grid>
+
+    </ScrollView>
+</ContentPage>
