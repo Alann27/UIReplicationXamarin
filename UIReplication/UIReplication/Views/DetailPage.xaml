@@ -5,10 +5,6 @@
              NavigationPage.HasNavigationBar="False"
              x:Name="detailPage">
 
-    <!--<NavigationPage.TitleView>
-        <Label Text="{Binding MusicItem.Title}" FontSize="25" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand"/>
-    </NavigationPage.TitleView>-->
-
     <ScrollView>
 
         <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,auto,0.15*,*" Padding="0" RowSpacing="2" ColumnSpacing="2">
@@ -19,11 +15,7 @@
 
                     </ImageButton>
 
-                    <Label Text="{Binding MusicItem.Title}"  HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" FontSize="30" TextColor="White" BackgroundColor="#00cebe">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding BackCommand}"/>
-                        </Label.GestureRecognizers>
-                    </Label>
+                    <Label Text="{Binding MusicItem.Title}"  HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" FontSize="30" TextColor="White" BackgroundColor="#00cebe"/>
                 </StackLayout>
 
             </Frame>
@@ -36,10 +28,6 @@
             <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e8f4f4">
                 <Label Text="{Binding MusicItem.Title}" TextColor="#49bbb9" Margin="15" FontSize="25" FontAttributes="Bold"/>
                 <Label Text="{Binding MusicItem.Description}" Margin="15,0,15,15" FontSize="25" TextColor="Gray"/>
-            </StackLayout>
-
-            <StackLayout>
-
             </StackLayout>
         </Grid>
 

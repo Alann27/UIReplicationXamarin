@@ -75,7 +75,7 @@ namespace UIReplication.ViewModels
         private async void OnSelectedMusicItem(NewMusicItem newMusicItem)
         {
             var parameters = new NavigationParameters();
-            parameters.Add("musicItem", newMusicItem);
+            parameters.Add(ParametersConstants.MusicItem, newMusicItem);
 
             await NavigationService.NavigateAsync($"{NavigationConstants.DetailPage}",parameters);
         }

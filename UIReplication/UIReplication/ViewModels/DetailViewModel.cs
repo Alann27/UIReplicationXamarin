@@ -28,11 +28,10 @@ namespace UIReplication.ViewModels
 
         public void Initialize(INavigationParameters parameters)
         {
-            if (parameters.TryGetValue("musicItem",out NewMusicItem musicItem))
+            if (parameters.TryGetValue(ParametersConstants.MusicItem,out NewMusicItem musicItem))
             {
                 MusicItem = musicItem;
             }
-            BackCommand = new Command(OnBack);
         }
     }
 }
